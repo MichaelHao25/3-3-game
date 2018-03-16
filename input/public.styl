@@ -10,40 +10,38 @@ background:rgba(255,255,255,.8);
  filter:alpha(opacity=40); 针对 IE8 以及更早的版本 */
  body
  	font-size 16Px
- .body-bg
- 	background #001739 url(../img/hico4.png) center top/100% auto no-repeat
 .header
-	background url(../img/hico5.png) center top/ 100% auto no-repeat
-	height 95px
-	overflow hidden
-	display -webkit-flex
-	display -moz-flex
-	display -ms-flex
-	display -o-flex
-	display flex
-	padding-bottom 17px
+	height 353px
+	position relative
 	img
 		display block
 		width 100%
-	.brand
-		margin 12px 0 0 23px
+	.btn
+		position absolute
+		bottom 0
+		left 50%
 		display block
-		width 220px
-	.title
-		margin 11px 0 0 45px
-		display block
-		width 210px
-	.progress
-		margin 30px 0 0 40px
-		padding 0 10px
-		height 36px
-		border-radius 16px
-		font-size 18px
+		width 266px
+		margin-left -133px
+		img
+			width 100%
+			display block
+	.back
+		position absolute
+		left 30px
+		top 30px
+		padding-left 25px
+		font-size 22px
 		color #fff
-		line-height 36px
-		text-align center
-		background linear-gradient(to bottom,#bf0000 0%,#ff4343 50%,#ff0505 100%) center top no-repeat
+		line-height 26px
+		height 26px
+		background url('../img/back.png') left center/auto 100% no-repeat
 .main
+	margin-top -22px
+	padding-top 20px
+	background url("../img/icon2.png") left top/100% auto no-repeat
+	&.bg-n
+		background none
 	.list
 		display -webkit-flex
 		display -moz-flex
@@ -53,20 +51,10 @@ background:rgba(255,255,255,.8);
 		flex-wrap wrap
 		justify-content space-around
 		.item
-			position relative
-			margin-top 20px
-			display -webkit-flex
-			display -moz-flex
-			display -ms-flex
-			display -o-flex
-			display flex
-			align-items center
-			flex-direction column
-			justify-content flex-end
-			width 122px
-			height 122px
-			padding 35px
-			background url(../img/hico7.png) center center/100% 100% no-repeat content-box
+			margin-top 30px
+			width 213px
+			height 213px
+			background url(../img/1.png) center center/100% 100% no-repeat
 			font-size 12px
 			color #fff
 			text-align center
@@ -74,7 +62,7 @@ background:rgba(255,255,255,.8);
 				color #f3ff33
 				padding-bottom 0px
 			.text
-				height 50px
+				height 55px
 				display -webkit-flex
 				display -moz-flex
 				display -ms-flex
@@ -83,23 +71,30 @@ background:rgba(255,255,255,.8);
 				flex-direction column
 				align-items center
 				justify-content center
+				background #e91616
+				width 100%
+				h3
+					font-size 19px
 			.layout
-				position absolute
-				z-index -1
-				left 0
-				right 0
-				top 0
-				bottom 0
-				background url(../img/hico6.png) 65% 75%/210px auto no-repeat
+				display -webkit-flex
+				display -moz-flex
+				display -ms-flex
+				display -o-flex
+				display flex
+				align-items flex-end
+				justify-content center
+				margin 10px
+				width calc(100% - 20px)
+				height calc(100% - 20px)
+				overflow hidden
+				border-radius 50%
+				background url(../img/icon4.png) center center/100% 100% no-repeat
 	.scroll-wrap
-		margin 50px auto 20px
-		width 660px
+		margin 40px 75px
 		height 370px
-		border 1px solid #424c79
 		border-radius 5px
-		padding 25px
-		font-size 24px
-		color #fff
+		font-size 22px
+		color #666666
 		line-height 2
 		text-align center
 		.wrap
@@ -109,6 +104,10 @@ background:rgba(255,255,255,.8);
 		span
 			padding 0 10px
 			color #ffcf2e
+			&.red
+				color #e91616
+			&.blue
+				color #4a89f0
 	.link-group
 		display -webkit-flex
 		display -moz-flex
@@ -116,7 +115,8 @@ background:rgba(255,255,255,.8);
 		display -o-flex
 		display flex
 		flex-wrap wrap
-		border-bottom 1px solid #424c79
+		border-bottom 1px solid #cdcdcd
+		background #e8e8e8
 		a
 			flex 0 0 33.33%
 			display -webkit-flex
@@ -128,11 +128,13 @@ background:rgba(255,255,255,.8);
 			justify-content center
 			box-sizing border-box
 			font-size 28px
-			color #fff
+			color #222222
 			line-height 100px
 			height 100px
-			border-top 1px solid #424c79
-			border-right 1px solid #424c79
+			border-top 1px solid #cdcdcd
+			border-right 1px solid #cdcdcd
+			&:nth-child(3n)
+				border-right none
 			img
 				display block
 				padding-right 10px
@@ -151,13 +153,13 @@ background:rgba(255,255,255,.8);
 		h3
 			padding 50px 0 40px
 			font-size 32px
-			color #ffcf2e
+			color #d40017
 			text-align center
-			border-bottom 1px dotted #ffcf2e
+			border-bottom 1px dotted #dcdcdc
 		.content
 			padding 30px 15px 50px
 			font-size 20px
-			color #fff
+			color #222222
 			line-height 2
 			.pt30
 				padding-top 30px
@@ -167,6 +169,7 @@ background:rgba(255,255,255,.8);
 			border 1px solid #424c79
 			border-radius 5px
 			padding-top 30px
+			background #dbdbdb
 			form
 				display block
 			.row
@@ -180,7 +183,7 @@ background:rgba(255,255,255,.8);
 				align-items center
 				justify-content flex-start
 				font-size 20px
-				color #fff
+				color #111111
 				.w20
 					width 204px
 					min-height 1px
@@ -232,136 +235,3 @@ background:rgba(255,255,255,.8);
 						width 100%
 						&::placeholder
 							color #8d8d8d
-						
-.footer
-	padding 30px 0 20px
-	text-align center
-	font-size 24px
-	color #5d6587
-	line-height 2
-
-
-
-.al-box
-	position: fixed
-	left: 0
-	top: 0
-	width: 100%
-	height: 100%
-	background-color: rgba(0,0,0,.6)
-	z-index: 2
-	display: none
-	.layout
-		width: 536px
-		height: 562px
-		background: #080d42
-		border: 3px solid #c8a442
-		position: absolute
-		left: 50%
-		top: 50%
-		border-radius: 8px
-		transform translate(-50%, -50%)
-		h2
-			a
-				margin:10px 10px 0 0
-				cursor: pointer
-				img
-					width 17px
-					transition: .3s
-					&:hover
-						transform: rotate(180deg)
-		h3
-			text-align: center
-			img
-				width 232px
-				
-		h4
-			text-align: center
-			font-size: 48px
-			color: #fff
-			font-family: "Impact"
-			margin-top: 32px
-		ul
-			border-top: 1px dotted #45433b
-			margin-top: 42px
-			padding: 25px 0 30px
-			li
-				width: 100%
-				margin-top: 17px
-				display -webkit-flex
-				display -moz-flex
-				display -ms-flex
-				display -o-flex
-				display flex
-				justify-content center
-				span
-					color: #cda846
-					float: left
-					width: 7em
-					text-align: right
-					margin-right: 10px
-					line-height: 44px
-					
-				select
-					width: 280px
-					height: 44px
-					border: 1px solid #665545
-					border-radius: 6px
-					background: #0a0a0a
-					padding-left: 10px
-					color: #e0ac24
-					font-size: 12px
-					outline none
-					box-sizing border-box
-					
-				input
-					width: 280px
-					height: 44px
-					border: 1px solid #665545
-					border-radius: 6px
-					background: #0a0a0a
-					color: #e0ac24
-					font-size: 12px
-					padding-left: 10px
-					box-sizing border-box
-					outline none
-					&::placeholder
-						color: #564f3e
-						
-				var
-					color: #cd0000
-					font-size: 18px
-					margin-left: 6px
-					position: relative
-					top: 10px
-					
-		strong
-			display: block
-			font-weight: normal
-			text-align: center
-			border-top: 1px dotted #45433b
-			padding-top: 20px
-			
-			a
-				display: inline-block
-				color: #fff
-				vertical-align: middle
-				margin: 0 10px
-				
-			.a0
-				width:234px
-				height: 79px
-				background-image: url(../img/ico5.png)
-				background-size 100% 100%
-				color: #3a210a
-				text-align: center
-				font-size 28px
-				color #3a210a
-				line-height 79px
-			.a1
-				width: 115px
-				height: 39px
-				background-image: url(../img/ico6.png)
-				text-align: center
-				line-height: 39px
-				
